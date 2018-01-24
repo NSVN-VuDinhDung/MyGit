@@ -12,7 +12,8 @@ namespace WindowsFormsApp1
     public class DL
     {
         public string ConnectionString => ConfigurationManager.AppSettings["DBConnection"];
-        private string proceName = "MD_FIELD_GETALL";
+        private string procName = "MD_FIELD_GETALL";
+        
         public Database ODbBase => m_dbBase;
         static protected Database m_dbBase;
         public DL()
@@ -57,6 +58,38 @@ namespace WindowsFormsApp1
 
 
             return dbCommand;
+        }
+
+        public IEnumerable<T> GetData<T>(string procName, params object[] paramsValue) where T : new()
+        {
+            IEnumerable<T> allData;
+            try
+            {
+                allData = QueryList<T>(procName, paramsValue);
+            }
+            catch ( Exception ex )
+            {
+
+                throw ex;
+            }
+
+
+            return allData;
+        }
+
+        public IEnumerable<T> QueryList<T>(string procName, params object[] paramsValue) where T : new()
+        {
+            IEnumerable<T> allData;
+            OracleDatabase oracleDataBase;
+
+            oracleDataBase = (OracleDatabase)m_dbBase;
+
+            IResultSetMapper<T> resultSetMapper = new EntityMapper<T>();
+            var accessor = new OracleSprocAccessor<T>(oracleDataBase, procName, resultSetMapper);
+
+            allData = accessor.Execute(paramsValue);
+
+            return allData;
         }
     }
 }

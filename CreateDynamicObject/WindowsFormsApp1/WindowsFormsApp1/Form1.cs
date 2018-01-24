@@ -22,23 +22,25 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            dynamic expando = new ExpandoObject();
-            AddProperty(expando, "Name", typeof(Int32));
-            AddProperty(expando, "Old", typeof(string));
+            IEnumerable<FieldInWorkflowEntity> dsFieldInWorkFlow = GetFieldInWorkFlow();
+
+            //dynamic expando = new ExpandoObject();
+            //AddProperty(expando, "Name", typeof(Int32));
+            //AddProperty(expando, "Old", typeof(string));
            
-            IDictionary<string, object> propertyValues = expando;
+            //IDictionary<string, object> propertyValues = expando;
 
-            foreach ( var property in propertyValues.Keys )
-            {
-                Console.WriteLine(String.Format("{0} : {1} : {2}", property, propertyValues[property], propertyValues[property].GetType().FullName));
-            }
+            //foreach ( var property in propertyValues.Keys )
+            //{
+            //    Console.WriteLine(String.Format("{0} : {1} : {2}", property, propertyValues[property], propertyValues[property].GetType().FullName));
+            //}
 
-            foreach ( string propertyName in GetPropertyKeysForDynamic(expando) )
-            {
-                object  propertyValue = expando[propertyName];
-                // And
-               // dynamicToGetPropertiesFor[propertyName] = "Your Value"; // Or an object value
-            }
+            //foreach ( string propertyName in GetPropertyKeysForDynamic(expando) )
+            //{
+            //    object  propertyValue = expando[propertyName];
+            //    // And
+            //   // dynamicToGetPropertiesFor[propertyName] = "Your Value"; // Or an object value
+            //}
         }
 
         public void AddProperty(ExpandoObject expando, string propertyName, Type propertyType)
@@ -67,6 +69,12 @@ namespace WindowsFormsApp1
                 toReturn.Add(key);
             }
             return toReturn;
+        }
+
+        private IEnumerable<FieldInWorkflowEntity> GetFieldInWorkFlow()
+        {
+            DL dLBase = new DL();
+            return dLBase.QueryList<FieldInWorkflowEntity>("MD_FIELD_GETALL", 1);
         }
     }
 }
