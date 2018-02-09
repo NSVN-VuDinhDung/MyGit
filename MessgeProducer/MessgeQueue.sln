@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessgeQueue", "MessgeProducer\MessgeQueue.csproj", "{B66486CC-B6E1-402A-8680-3B0258D589A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageConsumer", "..\MessageConsumer\NCSw.MessageConsumer\MessageConsumer.csproj", "{46281F80-8673-46C7-AE3C-6EDD2CA9A5AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProducer", "TestProducer\TestProducer.csproj", "{76DB74B8-EC56-4054-94BB-37B96468BC6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsumer", "..\MessageConsumer\TestConsumer\TestConsumer.csproj", "{4AE3FB49-00B9-4BA9-9884-1B7162ECCF54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B66486CC-B6E1-402A-8680-3B0258D589A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B66486CC-B6E1-402A-8680-3B0258D589A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B66486CC-B6E1-402A-8680-3B0258D589A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B66486CC-B6E1-402A-8680-3B0258D589A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46281F80-8673-46C7-AE3C-6EDD2CA9A5AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46281F80-8673-46C7-AE3C-6EDD2CA9A5AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46281F80-8673-46C7-AE3C-6EDD2CA9A5AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46281F80-8673-46C7-AE3C-6EDD2CA9A5AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76DB74B8-EC56-4054-94BB-37B96468BC6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76DB74B8-EC56-4054-94BB-37B96468BC6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76DB74B8-EC56-4054-94BB-37B96468BC6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76DB74B8-EC56-4054-94BB-37B96468BC6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AE3FB49-00B9-4BA9-9884-1B7162ECCF54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AE3FB49-00B9-4BA9-9884-1B7162ECCF54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AE3FB49-00B9-4BA9-9884-1B7162ECCF54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AE3FB49-00B9-4BA9-9884-1B7162ECCF54}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B1070FC-F9C1-4738-A78C-0417466D0BD0}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://egov:8080/tfs/collection2
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = MessgeProducer\\MessgeQueue.csproj
+		SccProjectName1 = MessgeProducer
+		SccLocalPath1 = MessgeProducer
+		SccProjectUniqueName2 = ..\\MessageConsumer\\NCSw.MessageConsumer\\MessageConsumer.csproj
+		SccProjectName2 = ../MessageConsumer/NCSw.MessageConsumer
+		SccLocalPath2 = ..\\MessageConsumer\\NCSw.MessageConsumer
+		SccProjectUniqueName3 = TestProducer\\TestProducer.csproj
+		SccProjectName3 = TestProducer
+		SccLocalPath3 = TestProducer
+		SccProjectUniqueName4 = ..\\MessageConsumer\\TestConsumer\\TestConsumer.csproj
+		SccProjectName4 = ../MessageConsumer/TestConsumer
+		SccLocalPath4 = ..\\MessageConsumer\\TestConsumer
+	EndGlobalSection
+EndGlobal

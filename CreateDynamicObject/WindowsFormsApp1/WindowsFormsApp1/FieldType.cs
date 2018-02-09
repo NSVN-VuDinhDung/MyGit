@@ -22,4 +22,19 @@ namespace WindowsFormsApp1
         DateTimeType = 3,
 
     }
+
+    public enum ControlType
+    {
+        [Description("Kiểu control dạng grid")]
+        GridControl = 0,
+
+        [Description("Kiểu control dạng grid")]
+        ComboboxControl = 1,
+
+        [Description("Kiểu control dạng grid")]
+        LabelControl = 2,
+
+        [Description("Kiểu control dạng grid")]
+        TextboxControl = 3,
+    }
 }

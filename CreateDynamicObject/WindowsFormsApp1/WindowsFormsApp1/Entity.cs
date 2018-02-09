@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
+    [MySpecial("")]
     public class FieldInWorkflowEntity
     {
         public string PS_WF_FIELD_IN_WORKFLOW_ID
@@ -96,6 +97,36 @@ namespace WindowsFormsApp1
         public int BUSINESS_FIELD_TYPE
         {
             get; set;
+        }
+
+        public string GRID_ID
+        {
+            get; set;
+        }
+
+        public int CONTROL_TYPE_ID
+        {
+            get; set;
+        }
+
+        public string DEPENDENT_BY
+        {
+            get; set;
+        }
+
+        public string FILTER_CONDITION
+        {
+            get; set;
+        }
+
+
+    }
+
+    public class MySpecialAttribute : Attribute
+    {
+        public MySpecialAttribute(string str)
+        {
+
         }
     }
 }
